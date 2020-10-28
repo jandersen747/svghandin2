@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .s1 {
+            display: flex;
+            flex-direction: row;
+        }
+        .svg0 {
+            margin: 0;
+            padding: 0;
+        }
+        .svg1 {
+            border: 1px solid grey;
+        }
+    </style>
+
+<script>
+
+    'use strict';
+    let $ = function(foo) { return document.getElementById(foo); }
+
+/* Danske flag */
+        let denmark = function() {
+        let xmlns = 'http://www.w3.org/2000/svg';
+        let svg = document.createElementNS(xmlns, 'svg');
+        svg.setAttributeNS(null, 'viewbox', '0 0 280 370');
+        svg.setAttributeNS(null, 'class', 'svg0');
+        svg.setAttributeNS(null, 'height', 280);
+        svg.setAttributeNS(null, 'width', 370);
+        svg.setAttributeNS(null, 'style', 'background-color: red;');
+
+        let r = document.createElementNS(xmlns, 'rect');
+        r.setAttributeNS(null, 'x', 120);
+        r.setAttributeNS(null, 'y', 0);
+        r.setAttributeNS(null, 'height', 280);
+        r.setAttributeNS(null, 'width', 40);
+        r.setAttributeNS(null, 'fill', 'white');
+        svg.appendChild(r);
+
+        let rto = document.createElementNS(xmlns, 'rect');
+        rto.setAttributeNS(null, 'x', 0);
+        rto.setAttributeNS(null, 'y', 120);
+        rto.setAttributeNS(null, 'height', 40);
+        rto.setAttributeNS(null, 'width', 370);
+        rto.setAttributeNS(null, 'fill', 'white');
+        svg.appendChild(rto);
+
+        $('svg0').appendChild(svg);
+
+    }
+/* Grøndlandske flag */
+    let greenland = function() {
+        let xmlns = 'http://www.w3.org/2000/svg';
+        let svg = document.createElementNS(xmlns, 'svg');
+        svg.setAttributeNS(null, 'viewbox', '0 0 200 300');
+        svg.setAttributeNS(null, 'class', 'svg1');
+        svg.setAttributeNS(null, 'height', 200);
+        svg.setAttributeNS(null, 'width', 300);
+        svg.setAttributeNS(null, 'style', 'background-color: white;');
+
+        let r = document.createElementNS(xmlns, 'rect');
+        r.setAttributeNS(null, 'x', 0);
+        r.setAttributeNS(null, 'y', 100);
+        r.setAttributeNS(null, 'height', 100);
+        r.setAttributeNS(null, 'width', 300);
+        r.setAttributeNS(null, 'fill', 'red');
+        svg.appendChild(r);
+
+
+        let c = document.createElementNS(xmlns, 'circle');
+        c.setAttributeNS(null, 'cx', 116.62);
+        c.setAttributeNS(null, 'cy', 100);
+        c.setAttributeNS(null, 'r', 66.64);
+        c.setAttributeNS(null, 'fill', 'white');
+        svg.appendChild(c);
+
+        let p = document.createElementNS(xmlns, 'path');
+        p.setAttributeNS(null, 'd', 'M50 100 A20 20, 0, 0 1, 183 100');
+        p.setAttributeNS(null, 'fill', 'red');
+        svg.appendChild(p);
+
+        $('svg1').appendChild(svg);
+
+    }
+        
+
+    window.addEventListener('load', denmark); 
+    window.addEventListener('load', greenland);
+
+</script>
+
+</head>
+<body>
+    <section id='s1'>
+        <div id='svg0'></div>
+        <div id='svg1'></div>
+    </section>
+
+   </svg>
+</body>
+</html>
